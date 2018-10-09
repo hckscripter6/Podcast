@@ -30,6 +30,11 @@ body {
     font-family: 'Anton', sans-serif;
 }
 
+article {
+    border: 1.5px solid black;
+    padding: 1em;
+}
+
 
 
 audio {
