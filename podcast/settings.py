@@ -25,7 +25,7 @@ SECRET_KEY = '*f1w92cyz+_we$815#q^b@qvd#cw@%b#)uwi0wma2_v=b^kyni'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['desolate-brook-52669.herokuapp.com']
+ALLOWED_HOSTS = ['desolate-brook-52669.herokuapp.com', 'localhost']
 
 
 # Application definition
