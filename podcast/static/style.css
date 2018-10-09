@@ -19,6 +19,8 @@ body {
 
 .container {
     padding-top: 1em;
+    border: 1px solid black;
+    
 }
 
 .jumbotron div.text-wrap {
@@ -73,11 +75,26 @@ article {
     .jumbotron h2 {
         font-size: 1.75em;
     }
+
+    .jumbotron {
+        height: 15em;
+    }
+
+    .container {
+        max-width: 100% !important;
+    }
+
+    .jumbotron div.text-wrap {
+        top: 0%;
+    }
+
 }
 
 @media screen and (max-width: 576px) { /* Small Devices */
+
+    
     .jumbotron {
-        height: 15em;
+        height: 13em;
     }
 
     .jumbotron h2 {
@@ -89,13 +106,15 @@ article {
     }
 
     p {
-        font-size: 1em;
+        font-size: .95em;
     }
 
     article h2 {
         font-size: 1.65em;
     }
 
- 
+    .jumbotron div.text-wrap {
+        top: 5%;
+    }
 }
 
