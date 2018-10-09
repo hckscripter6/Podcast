@@ -20,7 +20,7 @@
         <p>{{ display.description | safe }}</p>
         <!--<img height=300 width=350 src="{{ display.image.url }}">-->
         <br>
-        <audio controls>
+        <audio controls="controls" preload="none">
             <source src="{{ display.recording.url }}" type="audio/mpeg">
         </audio> 
         <a href="{{ display.recording.url }}" download>download audio</a>
