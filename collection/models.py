@@ -41,5 +41,13 @@ class Episode(models.Model):
     def __str__(self):
         return "%s" % (self.name)
 
+class Update(models.Model):
+    name = models.CharField(max_length=255)
+    description = RichTextField()
+    date_added = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return "%s" % (self.name)
+
 
 

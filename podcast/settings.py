@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'podcast.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd9hkuageuctssf',
+        'USER': 'vlonfsmcxnjtmi',
+        'PORT': '5432',
+        'PASSWORD': '3687506ee4478432351bb69edca7d66c25aaf8deba4189ea1265154fa431b8d7',
+        'HOST': 'ec2-54-221-225-11.compute-1.amazonaws.com'
     }
 }
 
@@ -118,6 +122,8 @@ USE_L10N = True
 USE_TZ = True
 
 AWS_QUERYSTRING_AUTH = False
+
+AWS_DEFAULT_ACL = None
 
 CKEDITOR_CONFIGS = {
     'default': {

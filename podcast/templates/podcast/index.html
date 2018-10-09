@@ -5,21 +5,19 @@
 {% endblock %}
 
 {% block jumbotron %}
-<div class="jumbotron text-center"><!--
+<div class="jumbotron text-center">
     <div class="text-wrap">
          <h2>Exploring life-changing ideas from the best gems of Non-Fiction</h2>
-    </div>-->
+    </div>
 </div>
 {% endblock %}
 
 {% block content %}
-<div class="container">
     {% for display in episodes %}
     <article>
         <h2>{{ display.name }}</h2>
+        <img src="{{ display.image.url }}">
         <p>{{ display.description | safe }}</p>
-        <!--<img height=300 width=350 src="{{ display.image.url }}">-->
-        <br>
         <audio controls="controls" preload="metadata">
             <source src="{{ display.recording.url }}" type="audio/wav">
         </audio> 
@@ -29,10 +27,9 @@
                 AudioPlayer.embed("audioplayer", {soundFile: "{{ display.recording.url }}"});
             }
         </script>
-        <a href="{{ display.recording.url }}" download="{{ display.recording }}">download audio</a>
+       <!-- <a href="{{ display.recording.url }}" download="{{ display.recording }}">download audio</a>-->
         
     </article>
         <hr>
     {% endfor %}
-</div>
 {% endblock %}
