@@ -1,4 +1,4 @@
-"""podcast URL Configuration
+"""blog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -14,10 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from collection import views
+from django.urls import path, include
+from posts import views
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index')
-]
+	path('ckeditor/', include('ckeditor_uploader.urls')),
+	path('', include('posts.urls')),
+	path('about', views.about, name="about"),
+    path('posts', views.listPosts, name="posts"),
+	path('contact', views.contact, name="contact")
+] 

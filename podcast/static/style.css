@@ -1,0 +1,60 @@
+/*  All Devices */
+body {
+    
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.jumbotron {
+    border-radius: 0 !important;
+    height: 300px;
+    background-image: url('http://www.printawallpaper.com/upload/designs/big_idea_detail.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 105em 35em;
+    border-top: 5px solid grey;
+    border-bottom: 5px solid grey;
+}
+
+.jumbotron div.text-wrap {
+    background-color: rgba(200, 200, 200, 0.5);
+    padding: 15px 20px;
+    width: 500px;
+    display: block;
+    border-radius: .25em;
+    margin: 0 auto;
+    position: relative;
+    top: 10%;
+}
+
+.jumbotron div.text-wrap h2 {
+    font-family: 'Anton', sans-serif;
+}
+
+
+
+audio {
+    width: 800px;
+}
+
+
+
+
+@media screen and (min-width: 1200px) { /* Extra Large Devices */
+  
+}
+
+@media screen and (min-width: 992px) { /* Large Devices */
+  
+}
+
+@media screen and (min-width: 768px) { /* Medium Devices */
+
+}
+
+@media screen and (min-width: 576px) { /* Small Devices */
+
+}
+
+@media screen and (max-width: 575px) { /* Extra Small Devices */
+  
+}

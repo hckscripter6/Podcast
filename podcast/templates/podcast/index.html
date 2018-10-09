@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    homepage
+{% endblock %}
+
+{% block jumbotron %}
+<div class="jumbotron text-center">
+    <div class="text-wrap">
+         <h2>Exploring life-changing ideas from the best gems of Non-Fiction</h2>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% for display in episodes %}
+    <article>
+        <h2>{{ display.name }}</h2>
+        <p>{{ display.description | safe }}</p>
+        <img height=300 width=350 src="{{ display.image.url }}">
+        <br>
+        <audio controls>
+            <source src="{{ display.recording.url }}" type="audio/mpeg">
+        </audio> 
+    </article>
+        <hr>
+    {% endfor %}
+</div>
+{% endblock %}
