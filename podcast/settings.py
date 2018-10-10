@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'podcast.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('ENGINE'),
-        'NAME': os.getenv('NAME'),
-        'USER': os.getenv('USER'),
-        'PORT': os.getenv('PORT'),
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': os.getenv('HOST')
+        'ENGINE': os.environ['ENGINE'],
+        'NAME': os.environ['NAME'],
+        'USER': os.environ['USER'],
+        'PORT': os.environ['PORT'],
+        'PASSWORD': os.environ['PASSWORD'],
+        'HOST': os.environ['HOST'],
     }
 }
 
