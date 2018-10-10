@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'podcast.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ['ENGINE'],
+        'ENGINE': 'django.db.backends.postgres',
         'NAME': os.environ['NAME'],
         'USER': os.environ['USER'],
-        'PORT': os.environ['PORT'],
+        'PORT': '5432',
         'PASSWORD': os.environ['PASSWORD'],
         'HOST': os.environ['HOST']
     }
