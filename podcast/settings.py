@@ -77,17 +77,7 @@ WSGI_APPLICATION = 'podcast.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd9hkuageuctssf',
-        'USER': 'vlonfsmcxnjtmi',
-        'PORT': '5432',
-        'PASSWORD': '3687506ee4478432351bb69edca7d66c25aaf8deba4189ea1265154fa431b8d7',
-        'HOST': 'ec2-54-221-225-11.compute-1.amazonaws.com'
-    }
-}
-
+from .database import *
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
