@@ -10,9 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
+#import django_heroku
 import os
 
-import django_heroku
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,9 +26,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*f1w92cyz+_we$815#q^b@qvd#cw@%b#)uwi0wma2_v=b^kyni'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-#ALLOWED_HOSTS = ['desolate-brook-52669.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['desolate-brook-52669.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -78,6 +79,18 @@ WSGI_APPLICATION = 'podcast.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('NAME'),
+        'USER': os.getenv('USER'),
+        'PASSWORD': os.getenv('PASSWORD'),
+        'HOST': os.getenv('HOST'),
+        'PORT': '5432'
+    }
+}
+
+DATABASE_URL = os.getenv('DATABASE_URL', 'postgres://wdhgszevysnbkr:985d3c373b5b23dd1d96feb65b7af8563aae99792fd26c0a79d72a7f65924961@ec2-54-221-225-11.compute-1.amazonaws.com:5432/d9hkuageuctssf')
 
 
 # Password validation
@@ -143,4 +156,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
