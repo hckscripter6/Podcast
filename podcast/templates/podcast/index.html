@@ -21,15 +21,8 @@
         <audio controls="controls" preload="metadata">
             <source src="{{ display.recording.url }}" type="audio/wav">
         </audio> 
-        <script type="text/javascript">
-            var audioTag = document.createElement('audio');
-            if (!(!!(audioTag.canPlayType) && ("no" != audioTag.canPlayType("audio/wav")) && ("" != audioTag.canPlayType("audio/wav")))) {
-                AudioPlayer.embed("audioplayer", {soundFile: "{{ display.recording.url }}"});
-            }
-        </script>
-       <!-- <a href="{{ display.recording.url }}" download="{{ display.recording }}">download audio</a>-->
         
-    </article>
+    </article> 
         <hr>
     {% endfor %}
 {% endblock %}

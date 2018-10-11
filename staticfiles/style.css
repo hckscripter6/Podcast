@@ -1,0 +1,119 @@
+/*  All Devices */
+body {
+    
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.jumbotron {
+    border-radius: 0 !important;
+    height: 300px;
+    background-image: url('http://www.printawallpaper.com/upload/designs/big_idea_detail.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 105em 35em;
+    border-top: 5px solid #46464d;
+    border-bottom: 5px solid #4d4646;
+    margin-bottom: 0 !important;
+    background-color: rgb(33, 37, 41) !important;
+}
+
+.container {
+    padding-top: 1em;
+    
+}
+
+.jumbotron div.text-wrap {
+    background-color: rgba(160, 160, 160, 0.5);
+    padding: 15px 20px;
+    width: 500px;
+    display: block;
+    border-radius: .25em;
+    margin: 0 auto;
+    position: relative;
+    top: 10%;
+}
+
+.jumbotron div.text-wrap h2 {
+    font-family: 'Anton', sans-serif;
+}
+
+article img {
+    width: 150px;
+    height: auto;
+    position: relative;
+    top: .75em;
+    float: left;
+    padding: 0 1em .5em 0;
+}
+
+audio {
+    width: 100%;
+}
+
+article {
+
+    padding: .25em .5em;
+    border-radius: 2px;
+}
+
+article {
+    width: 50em;
+}
+
+@media screen and (max-width: 1200px) { /* Extra Large Devices */
+  
+}
+
+@media screen and (max-width: 992px) { /* Large Devices */
+    article {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) { /* Medium Devices */
+    .jumbotron h2 {
+        font-size: 1.75em;
+    }
+
+    .jumbotron {
+        height: 15em;
+    }
+
+    .container {
+        max-width: 100% !important;
+    }
+
+    .jumbotron div.text-wrap {
+        top: 0%;
+    }
+
+}
+
+@media screen and (max-width: 576px) { /* Small Devices */
+
+    
+    .jumbotron {
+        height: 13em;
+    }
+
+    .jumbotron h2 {
+        font-size: 1.5em;
+    }
+
+    .jumbotron div.text-wrap {
+        width: 100%;
+    }
+
+    p {
+        font-size: .95em;
+    }
+
+    article h2 {
+        font-size: 1.65em;
+    }
+
+    .jumbotron div.text-wrap {
+        top: 5%;
+    }
+}
+

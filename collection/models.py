@@ -3,6 +3,14 @@ from django.utils import timezone
 from ckeditor.fields import RichTextField
 from storages.backends.s3boto3 import S3Boto3Storage
 
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return "%s" % (self.name)
+
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -12,12 +20,6 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
-
-class Tag(models.Model):
-    name = models.CharField(max_length=100)
-
-    def __str__(self):
-        return "%s" % (self.name)
 
 class Person(models.Model):
     name = models.CharField(max_length=125)
