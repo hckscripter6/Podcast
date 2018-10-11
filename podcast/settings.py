@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 
 import os
-import django_heroku
-#import dj_database_url
+#import django_heroku
+import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*f1w92cyz+_we$815#q^b@qvd#cw@%b#)uwi0wma2_v=b^kyni'
+SECRET_KEY = os.environ["SECRET_KEY"]    #'*f1w92cyz+_we$815#q^b@qvd#cw@%b#)uwi0wma2_v=b^kyni'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,8 +81,8 @@ WSGI_APPLICATION = 'podcast.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-#DATABASES = {}
-#DATABASES['default'] = dj_database_url.config(default=os.environ['DATABASE_URL'], conn_max_age=600)
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config(default=os.environ['DATABASE_URL'], conn_max_age=600)
 
 
 # Password validation
@@ -146,4 +146,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
